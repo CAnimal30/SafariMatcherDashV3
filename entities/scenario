@@ -1,0 +1,33 @@
+{
+  "name": "Scenario",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the scenario"
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "All input parameters for the scenario"
+    }
+  },
+  "required": [
+    "name",
+    "inputs"
+  ],
+  "rls": {
+    "create": {
+      "created_by": "{{user.email}}"
+    },
+    "update": {
+      "data.Clark Alden": "{{user.full_name}}"
+    },
+    "read": {
+      "data.Clark Alden": "{{user.full_name}}"
+    },
+    "delete": {
+      "created_by": "{{user.email}}"
+    }
+  }
+}
